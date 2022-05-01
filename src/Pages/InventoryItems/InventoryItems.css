@@ -1,0 +1,7 @@
+.items-container,
+.products-container,
+.offer-products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid lightslategray;
+}

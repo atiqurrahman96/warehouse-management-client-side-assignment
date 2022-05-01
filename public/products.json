@@ -10,7 +10,7 @@
     },
     {
         "id": "2",
-        "image": "https://i.ibb.co/PwpHgBq/product2.jpg",
+        "image": "https://i.ibb.co/zhQTtWW/product2.jpg",
         "name": "Vaseline",
         "supplier": "MD Takveer Ahmed",
         "price": 2,
@@ -64,8 +64,8 @@
     },
     {
         "id": "8",
-        "image": "https://i.ibb.co/44VG702/product8.jpg",
-        "name": "Baby Soap",
+        "image": "https://i.ibb.co/cYSnkLg/product8.jpg",
+        "name": "Baby Oil",
         "supplier": "MD Mahabubur Rahman",
         "price": 2,
         "quantity": 5,

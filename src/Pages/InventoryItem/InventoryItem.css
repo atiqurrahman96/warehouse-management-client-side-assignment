@@ -1,0 +1,22 @@
+.item-container,
+.product-container,
+.offer-product-container {
+    border: 2px solid lightskyblue;
+    margin: 10px;
+    box-sizing: border-box;
+    box-shadow: 10px 10px rgba(223, 15, 133, 0.138);
+}
+
+.img-container,
+.baby-img-container,
+.offer-product-img-container {
+
+    box-sizing: border-box;
+    box-shadow: 10px 2px rgb(223, 218, 209)
+}
+
+.detail-container,
+.baby-product-detail-container,
+.offer-product-product-detail-container {
+    margin-bottom: 5px;
+}

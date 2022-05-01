@@ -1,10 +1,16 @@
 import React from 'react';
+import BabyProducts from '../Blogs/BabyProducts/BabyProducts';
 import Header from '../Header/Header';
+import InventoryItems from '../InventoryItems/InventoryItems';
+import OfferProdcuts from '../OfferProducts/OfferProdcuts';
+
 
 const Home = () => {
     return (
         <div>
-            <h1>this is home page</h1>
+            <InventoryItems></InventoryItems>
+            <BabyProducts></BabyProducts>
+            <OfferProdcuts></OfferProdcuts>
         </div>
     );
 };
