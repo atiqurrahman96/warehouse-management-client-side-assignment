@@ -1,0 +1,13 @@
+.login-container {
+    border-radius: 34px;
+    background: #e0e0e0;
+    box-shadow: 30px 30px 33px #797979,
+        -30px -30px 33px #ffffff;
+
+}
+
+.form-submit {
+    width: 150px;
+    height: 50px;
+    background-color: lightcoralw;
+}
