@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import ThirdPartyLogin from '../ThirdPartyLogin/ThirdPartyLogin';
 import './Login.css'
 const Login = () => {
     const navigate = useNavigate();
@@ -42,6 +43,7 @@ const Login = () => {
                 </Button>
             </Form>
             <p>Don't have an account yet? <Link className='form-link text-decoration-none' to='/signUp'>Create an account</Link></p>
+            <ThirdPartyLogin></ThirdPartyLogin>
         </div>
 
 
