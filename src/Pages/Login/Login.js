@@ -12,10 +12,16 @@ const Login = () => {
         user,
         loading,
         error,
+
     ] = useSignInWithEmailAndPassword(auth);
+    let errorElement;
+    if (error) {
+        errorElement = <p>Error:{error?.message}</p>
+    }
     if (user) {
         navigate('/home')
     }
+
     const handleLogin = event => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -37,7 +43,7 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" name='password' placeholder="Password" />
                 </Form.Group>
-
+                <p className='text-red-600'>{errorElement}</p>
                 <Button className='mb-2 form-submit' variant="primary" type="submit">
                     Submit
                 </Button>
