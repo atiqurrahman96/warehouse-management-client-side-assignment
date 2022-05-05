@@ -7,7 +7,7 @@ import OfferProdcuts from '../OfferProducts/OfferProdcuts';
 
 const Home = () => {
     return (
-        <div>
+        <div id='home'>
             <InventoryItems></InventoryItems>
             <BabyProducts></BabyProducts>
             <OfferProdcuts></OfferProdcuts>

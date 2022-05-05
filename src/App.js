@@ -7,6 +7,10 @@ import Blogs from './Pages/Blogs/Blogs';
 import Header from './Pages/Header/Header';
 import Login from './Pages/Login/Login';
 import SignUp from './Pages/SignUp/SignUp';
+import UpdateItems from './Pages/UpdateItems/UpdateItems';
+import NotFound from './Pages/NotFound/NotFound';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+
 
 function App() {
   return (
@@ -18,8 +22,16 @@ function App() {
         <Route path='/home' element={<Home />}></Route>
 
         <Route path='/blogs' element={<Blogs />}></Route>
+        <Route path='/inventory/:id' element={<RequireAuth>
+          <UpdateItems />
+        </RequireAuth>}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signUp' element={<SignUp />}></Route>
+
+
+
+
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </div>
   );

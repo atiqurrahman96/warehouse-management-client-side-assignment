@@ -10,7 +10,7 @@ const InventoryItems = () => {
     }, [])
     return (
         <div>
-            <h1>My Items:{items.length}</h1>
+            <h1>My Inventory:{items.length}</h1>
             <div className='items-container'>
                 {
                     items.slice(0, 6).map(item => <InventoryItem
