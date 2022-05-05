@@ -1,6 +1,7 @@
 .item-container,
 .product-container,
-.offer-product-container {
+.offer-product-container,
+.manage-inventory-container {
     border: 2px solid lightskyblue;
     margin: 10px;
     box-sizing: border-box;
@@ -9,7 +10,8 @@
 
 .img-container,
 .baby-img-container,
-.offer-product-img-container {
+.offer-product-img-container,
+.manage-inventory-img-container {
 
     box-sizing: border-box;
     box-shadow: 10px 2px rgb(223, 218, 209)
@@ -17,6 +19,7 @@
 
 .detail-container,
 .baby-product-detail-container,
-.offer-product-product-detail-container {
+.offer-product-product-detail-container,
+.manage-inventory-detail-container {
     margin-bottom: 5px;
 }

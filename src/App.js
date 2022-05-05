@@ -10,6 +10,7 @@ import SignUp from './Pages/SignUp/SignUp';
 import UpdateItems from './Pages/UpdateItems/UpdateItems';
 import NotFound from './Pages/NotFound/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import ManageInventories from './Pages/ManageInventories/ManageInventories';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/inventory/:id' element={<RequireAuth>
           <UpdateItems />
         </RequireAuth>}></Route>
+        <Route path='/manageInventories' element={<ManageInventories />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signUp' element={<SignUp />}></Route>
 
