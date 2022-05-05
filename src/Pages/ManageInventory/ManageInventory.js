@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 const ManageInventory = ({ inventory }) => {
     const { id, image, name, quantity, supplier, price, description } = inventory;
@@ -14,6 +15,7 @@ const ManageInventory = ({ inventory }) => {
                 <p>Quantity:{quantity}</p>
                 <p>Description:{description}</p>
             </div>
+            <Button>Delete</Button>
         </div>
     );
 };

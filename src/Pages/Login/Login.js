@@ -4,6 +4,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import ThirdPartyLogin from '../ThirdPartyLogin/ThirdPartyLogin';
 import './Login.css'
 const Login = () => {
@@ -23,6 +24,9 @@ const Login = () => {
         auth
     );
     let errorElement;
+    if (loading || sending) {
+        return <Loading></Loading>
+    }
     if (error) {
         errorElement = <p>Error:{error?.message}</p>
     }

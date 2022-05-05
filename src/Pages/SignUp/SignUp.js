@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const SignUp = () => {
     const [validated, setValidated] = useState(false);
@@ -20,6 +21,9 @@ const SignUp = () => {
 
     if (user) {
         console.log(user, 'user');
+    }
+    if (loading || updating) {
+        return <Loading></Loading>
     }
     const handleSignUpSubmit = async (event) => {
         // const form = event.currentTarget;

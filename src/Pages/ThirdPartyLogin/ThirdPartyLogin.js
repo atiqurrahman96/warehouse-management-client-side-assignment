@@ -4,6 +4,7 @@ import github from '../../images/icons/github.png'
 import { useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../Loading/Loading';
 const ThirdPartyLogin = () => {
     const navigate = useNavigate();
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -14,6 +15,9 @@ const ThirdPartyLogin = () => {
     }
     if (user || githubUser) {
         navigate('/home');
+    }
+    if (loading || githubLoading) {
+        return <Loading></Loading>
     }
     return (
         <div>
