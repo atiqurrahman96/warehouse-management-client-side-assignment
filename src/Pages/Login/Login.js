@@ -7,6 +7,8 @@ import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import ThirdPartyLogin from '../ThirdPartyLogin/ThirdPartyLogin';
 import './Login.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
@@ -46,6 +48,7 @@ const Login = () => {
     const handleResetPassword = async () => {
         const email = emailRef.current.value;
         await sendPasswordResetEmail(email)
+        toast('Email sent')
     }
 
     return (
@@ -71,6 +74,8 @@ const Login = () => {
             <p>Don't have an account yet? <Link className='form-link text-decoration-none' to='/signUp'>Create an account</Link></p>
             <p>Forget Password?<Button to='/home' onClick={handleResetPassword} className='m-2'>Reset Password</Button></p>
             <ThirdPartyLogin></ThirdPartyLogin>
+            <ToastContainer />
+
         </div>
 
 

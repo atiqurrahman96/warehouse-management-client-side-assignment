@@ -4,7 +4,7 @@ import OfferProduct from '../OfferProduct/OfferProduct';
 const OfferProdcuts = () => {
     const [offerProducts, setOfferProducts] = useState([]);
     useEffect(() => {
-        fetch('products.json')
+        fetch('http://localhost:5000/products')
             .then(res => res.json())
             .then(data => setOfferProducts(data))
     }, [])
@@ -15,7 +15,7 @@ const OfferProdcuts = () => {
             <div className='offer-products-container'>
                 {
                     offerProducts.slice(4, 7).map(offerProduct => <OfferProduct
-                        key={offerProduct.id}
+                        key={offerProduct._id}
                         offerProduct={offerProduct}
 
                     >
