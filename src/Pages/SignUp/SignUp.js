@@ -5,7 +5,8 @@ import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-fireb
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import { useState } from 'react';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
     const [error, setError] = useState('')
@@ -14,10 +15,10 @@ const SignUp = () => {
     const [
         createUserWithEmailAndPassword,
         user,
-        loading,
-        userError,
+        loading
+
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
+    const [updateProfile, updating] = useUpdateProfile(auth);
 
 
     if (user) {
@@ -36,6 +37,7 @@ const SignUp = () => {
         const email = event.target.email.value;
         const password = event.target.password.value;
         const confirmPassword = event.target.confirmPassword.value;
+        // -----Password validation----------
         if (password !== confirmPassword) {
             setError('Password did not match');
             return;
@@ -44,11 +46,14 @@ const SignUp = () => {
             setError('Your password must be 8 characters')
             return;
         }
-
+        if (!/(?=.*[A-Z])/.test(password)) {
+            setError("Please, provide your password with uppercase letter")
+            return;
+        }
         event.target.reset();
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
-        console.log('Updated profile');
+        toast('Updated profile');
 
     }
     return (
@@ -88,6 +93,7 @@ const SignUp = () => {
 
                 </Form>
                 <p>Already have an account ? <Link className='form-link text-decoration-none' to='/login'>Log in</Link></p>
+                <ToastContainer />
             </div >
 
         </div >

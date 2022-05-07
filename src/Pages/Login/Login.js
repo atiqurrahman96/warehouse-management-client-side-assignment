@@ -43,7 +43,9 @@ const Login = () => {
 
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
+
         await signInWithEmailAndPassword(email, password);
+
         const { data } = await axios.post('http://localhost:5000/getToken', { email });
         localStorage.setItem('token', data.token);
         navigate(from, { replace: true });

@@ -5,4 +5,64 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     border: 5px solid lightslategray;
+    border-radius: 5px;
+}
+
+/* ----responsive style */
+/* ----Extra small devices----- */
+@media only screen and (max-width: 600px) {
+
+    .items-container,
+    .products-container,
+    .offer-products-container,
+    .manage-inventories-items-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* -------Small devices---------- */
+@media only screen and (min-width:600px) {
+
+    .items-container,
+    .products-container,
+    .offer-products-container,
+    .manage-inventories-items-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+/* ---------Medium devices-------- */
+@media only screen and (min-width: 768px) {
+
+    .items-container,
+    .products-container,
+    .offer-products-container,
+    .manage-inventories-items-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/* --------Large devices------- */
+@media only screen and (min-width: 992px) {
+
+    .items-container,
+    .products-container,
+    .offer-products-container,
+    .manage-inventories-items-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ----------Extra large devices or laptops and desktops */
+@media only screen and (min-width: 1200px) {
+
+    .items-container,
+    .products-container,
+    .offer-products-container,
+    .manage-inventories-items-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

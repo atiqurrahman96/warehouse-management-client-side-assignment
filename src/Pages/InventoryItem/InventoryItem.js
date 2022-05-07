@@ -23,7 +23,7 @@ const InventoryItem = ({ item }) => {
                 <p>Description:{description}</p>
 
             </div>
-            <Button onClick={() => navigateToUpdateItems(_id)}>Update</Button>
+            <Button id='btn' onClick={() => navigateToUpdateItems(_id)}>Update</Button>
         </div>
     );
 };

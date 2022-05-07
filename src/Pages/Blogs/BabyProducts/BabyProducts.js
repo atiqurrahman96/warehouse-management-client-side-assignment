@@ -10,7 +10,7 @@ const BabyProducts = () => {
     }, [])
     return (
         <div className='mt-2'>
-            <h1>Baby Collection</h1>
+            <h1 className='text-primary'>Baby Collection</h1>
             <div className='products-container'>
                 {
                     products.slice(6, 9).map(product => <BabyProduct

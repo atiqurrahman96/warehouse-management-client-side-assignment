@@ -9,14 +9,14 @@ import auth from '../../firebase.init';
 
 const Header = () => {
     const [user] = useAuthState(auth);
-    console.log('user', user);
+
     const logOut = () => {
         signOut(auth)
     }
     return (
         <Navbar sticky='top' collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container>
-                <Navbar.Brand href="home#home">My Grocery Warehouse</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">My Grocery Warehouse</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">

@@ -10,7 +10,7 @@ const OfferProdcuts = () => {
     }, [])
     return (
         <div>
-            <h2>Special Offer Products </h2>
+            <h2 className='text-primary'>Special Offer Products </h2>
             <marquee behavior="" direction="">Following products are 50% OFF</marquee>
             <div className='offer-products-container'>
                 {
