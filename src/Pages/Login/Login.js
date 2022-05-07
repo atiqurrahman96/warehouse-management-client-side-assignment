@@ -65,13 +65,13 @@ const Login = () => {
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
-                    <Form.Control ref={emailRef} type="email" name='email' placeholder="Enter email" />
+                    <Form.Control ref={emailRef} type="email" name='email' placeholder="Enter email" required />
 
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>Password</Form.Label>
-                    <Form.Control ref={passwordRef} type="password" name='password' placeholder="Password" />
+                    <Form.Control ref={passwordRef} type="password" name='password' placeholder="Password" required />
                 </Form.Group>
                 <p className='text-red-600'>{errorElement}</p>
                 <Button className='mb-2 form-submit' variant="primary" type="submit">

@@ -64,25 +64,25 @@ const SignUp = () => {
                 <Form onSubmit={handleSignUpSubmit} className='w-100'>
                     <Form.Group className="mb-3" controlId="">
                         <Form.Label>Enter your name</Form.Label>
-                        <Form.Control type="text" name='name' placeholder="Enter Your Name" />
+                        <Form.Control type="text" name='name' placeholder="Enter Your Name" required />
 
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" name='email' placeholder="Enter email" />
+                        <Form.Control type="email" name='email' placeholder="Enter email" required />
 
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control type="password" name='password' placeholder="Password" />
+                        <Form.Control type="password" name='password' placeholder="Password" required />
                         <Form.Control.Feedback type="invalid">
                             Please provide a valid password.
                         </Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="">
                         <Form.Label>Confirm Password</Form.Label>
-                        <Form.Control type="Password" name='confirmPassword' placeholder="Confirm Password" />
+                        <Form.Control type="Password" name='confirmPassword' placeholder="Confirm Password" required />
 
                     </Form.Group>
                     <p className='text-red-700'>{error}</p>
