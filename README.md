@@ -6,7 +6,8 @@
 3.React Router\
 4.Tailwind Css\
 5.Email and password authentication\
-6.Social login.
+6.Social login\
+7.Deploy in firebase.
 
 #### This is warehouse project . Here we can add products and delete too. This project also helps to manage all products.Here I also have used blog from here you can some answer of your questons.
 

@@ -5,7 +5,7 @@ const AddNewItems = () => {
     const onSubmit = data => {
         console.log(data)
 
-        const url = `http://localhost:5000/products`
+        const url = `https://hidden-fortress-61093.herokuapp.com/products`
         fetch(url, {
             method: "POST",
             headers: {

@@ -9,7 +9,7 @@ const UpdateItems = () => {
     const [updateItem, setUpdateItem] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://hidden-fortress-61093.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => setUpdateItem(data))
     }, [])

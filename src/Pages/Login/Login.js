@@ -46,7 +46,7 @@ const Login = () => {
 
         await signInWithEmailAndPassword(email, password);
 
-        const { data } = await axios.post('http://localhost:5000/getToken', { email });
+        const { data } = await axios.post('https://hidden-fortress-61093.herokuapp.com/getToken', { email });
         localStorage.setItem('token', data.token);
         navigate(from, { replace: true });
 

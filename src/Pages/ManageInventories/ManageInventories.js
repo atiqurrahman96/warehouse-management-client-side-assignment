@@ -10,14 +10,14 @@ const ManageInventories = () => {
     }
     const [inventories, setInventories] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://hidden-fortress-61093.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])
     const deleteItem = id => {
         const proceed = window.confirm('Are You permit to Delete')
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`
+            const url = `https://hidden-fortress-61093.herokuapp.com/products/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
