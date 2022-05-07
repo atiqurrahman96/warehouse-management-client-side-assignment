@@ -15,6 +15,7 @@ import UpdateItem from './Pages/UpdateItem/UpdateItem';
 import AddNewItems from './Pages/AddNewItems/AddNewItems';
 
 
+
 function App() {
   return (
     <div className="App">
@@ -39,6 +40,8 @@ function App() {
         <Route path='/addNewItem' element={<RequireAuth>
           <AddNewItems />
         </RequireAuth>}></Route>
+
+
         <Route path='/login' element={<Login />}></Route>
         <Route path='/signUp' element={<SignUp />}></Route>
 

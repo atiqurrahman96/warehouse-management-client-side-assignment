@@ -10,9 +10,10 @@ const UpdateItems = () => {
 
     useEffect(() => {
         fetch(`http://localhost:5000/products/${id}`)
+            .then(res => res.json())
+            .then(data => setUpdateItem(data))
     }, [])
-        .then(res => res.json())
-        .then(data => setUpdateItem(data))
+
     const navigate = useNavigate();
     const update = () => {
         navigate('/update')
