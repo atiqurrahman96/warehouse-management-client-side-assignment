@@ -2,10 +2,11 @@
 .product-container,
 .offer-product-container,
 .manage-inventory-container {
-    border: 2px solid lightskyblue;
+
     margin: 10px;
     box-sizing: border-box;
     box-shadow: 10px 10px rgba(223, 15, 133, 0.138);
+    border-radius: 10px;
 }
 
 .img-container,
