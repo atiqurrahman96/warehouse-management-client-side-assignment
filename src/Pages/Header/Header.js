@@ -16,7 +16,7 @@ const Header = () => {
     return (
         <Navbar sticky='top' collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container>
-                <Navbar.Brand href="home#home">React-Bootstrap</Navbar.Brand>
+                <Navbar.Brand href="home#home">My Grocery Warehouse</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
