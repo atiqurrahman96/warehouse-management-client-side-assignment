@@ -32,7 +32,7 @@ const UpdateItems = () => {
                 </ListGroup>
 
             </Card>
-            <Button>Delivery</Button>
+            <Button className='mt-2 mb-2'>Delivery</Button>
 
         </div>
     );

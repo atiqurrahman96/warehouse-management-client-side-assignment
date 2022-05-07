@@ -1,4 +1,14 @@
-# Getting Started with Create React App
+# My Grocery Warehouse 
+# [Click Here to Visit My Site]()
+### Whatever I have used so far in this project, Some of them are given below:\
+1.Create react app\
+2.React firebase hook\
+3.React Router\
+4.Tailwind Css\
+5.Email and password authentication\
+6.Social login.\
+
+#### This is warehouse project . Here we can add products and delete too. This project also helps to manage all products.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
